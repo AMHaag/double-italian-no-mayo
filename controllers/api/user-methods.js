@@ -1,5 +1,4 @@
-const { User, Post, Comment, Vote } = require('../../models');
-const auth = require('../../utils/authorize');
+const { User, Post, Comment } = require('../../models');
 
 let userController = {
   getAllUsers: function (req, res) {
