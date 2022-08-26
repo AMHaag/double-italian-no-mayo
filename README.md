@@ -8,4 +8,4 @@ posts data expect:
 `{"title":"post_title","content":"body"}`
 
 comments data expected:
-{"posts_id":"1","commentsText":"she looks so sad in photographs"}
+`{"posts_id":"1","commentsText":"body"}` 
