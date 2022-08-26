@@ -1,4 +1,4 @@
-const { User, Post, Comment } = require('../../models');
+const { User, Posts, Comments } = require('../../models');
 
 let userController = {
   getAllUsers: function (req, res) {
@@ -19,14 +19,14 @@ let userController = {
       },
       include: [
         {
-          model: Post,
-          attributes: ['id', 'title', 'post_url', 'content', 'created_at'],
+          model: Posts,
+          attributes: ['id', 'title', 'content', 'created_at'],
         },
         {
-          model: Comment,
-          attributes: ['id', 'comment_text', 'created_at'],
+          model: Comments,
+          attributes: ['id', 'commentsText', 'created_at'],
           include: {
-            model: Post,
+            model: Posts,
             attributes: ['title'],
           },
         },
@@ -63,7 +63,7 @@ let userController = {
         res.status(500).json(err);
       });
   },
-  updateUser: function (res, res) {
+  updateUser: function (req, res) {
     User.update(req.body, {
       individualHooks: true,
       where: {
@@ -116,7 +116,7 @@ let userController = {
       if (!validPassword) {
         res
           .status(400)
-          .json({ message: 'Password incorrect, please try again' });
+          .json({ message: 'Password incorrect' });
         return;
       }
 
@@ -143,4 +143,4 @@ let userController = {
   },
 };
 
-module.export = userController;
+module.exports = userController;

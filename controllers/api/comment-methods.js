@@ -12,9 +12,9 @@ let commentsController = {
   createComment: function (req, res) {
     // expected format {"commentText": "This is text", "user_id": "1", "post_id": "2"}
     Comments.create({
-      commentText: req.body.comment_text,
+      commentsText: req.body.commentsText,
       user_id: req.session.user_id,
-      posts_id: req.body.post_id,
+      posts_id: req.body.posts_id,
     })
       .then((dbCommentData) => res.json(dbCommentData))
       .catch((err) => {
@@ -44,4 +44,4 @@ let commentsController = {
   },
 };
 
-modules.export = commentsController;
+module.exports = commentsController;

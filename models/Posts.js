@@ -8,7 +8,7 @@ Posts.init(
     id: {
       type: DataTypes.INTEGER,
       primaryKey: true,
-      autoIncrement: true
+      autoIncrement: true,
     },
     title: {
       type: DataTypes.STRING,
@@ -16,22 +16,22 @@ Posts.init(
     content: {
       type: DataTypes.STRING,
       validate: {
-        len: [10]
-      }
+        len: [10],
+      },
     },
     user_id: {
       type: DataTypes.INTEGER,
       references: {
         model: 'user',
-        key: 'id'
-      }
-    }
+        key: 'id',
+      },
+    },
   },
   {
     sequelize,
     freezeTableName: true,
     underscored: true,
-    modelName: 'posts'
+    modelName: 'posts',
   }
 );
 
