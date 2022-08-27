@@ -9,26 +9,29 @@ html {
     margin: 0;
     font-family: sans-serif;
     color: #222222;
-    background-color: aliceblue;
+    background-color: darkslategray;
+}
+h2{
+    background-color: darkslategray;
 }
 
 a {
     text-decoration: none;
-    color: #3486fb;
+    color: darkblue;
     font-weight: bold;
     transition: color .1s;
 }
 
 a:hover {
-    color: #008ca3;
+    color: blue;
 }
 
 a:active {
-    background-color: #2fbfbf;
+    background-color: lightblue;
 }
 
 button {
-    background-color: #3486fb;
+    background-color: red;
     border: 0;
     padding: 1%;
     color: white;
@@ -36,11 +39,11 @@ button {
 }
 
 button:hover {
-    background-color: #008ca3;
+    background-color: lightblue;
 }
 
 button:active {
-    background-color: #2fbfbf;
+    background-color: lightgreen;
 }
 
 .post-list {
@@ -53,7 +56,7 @@ input {
     padding: 1%;
     border-radius: 2px;
     border: 1px solid #ccc;
-    background-color: white;
+    /* background-color: white; */
 }
 
 textarea:focus,
